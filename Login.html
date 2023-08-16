@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<head>
+  <header>
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <style>
+    header {
+      background-color: transparent;
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand {
+      font-size: 50px;
+      font-weight: bold;
+      color: black;
+      margin-left: 10px;
+    }
+
+    form {
+      border: 3px solid white;
+      border-radius: 20px;
+    }
+
+
+
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 5px;
+}
+    
+
+    button {
+      background-color: rgb(95, 215, 245);
+      color: white;
+      padding: 20px 20px;
+      margin: 12px 0;
+      border: none;
+      cursor: pointer;
+      width: 20%;
+      border-radius: 5px;
+
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: white;
+      border-radius: 5px;
+
+    }
+
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+
+    img.avatar {
+      width: 40%;
+      border-radius: 50%;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 10px;
+    }
+
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+
+      .cancelbtn {
+        width: 100%;
+      }
+    }
+    footer{
+      background-color: rgb(255, 255, 255);
+    }
+    body {
+      background-image: url('Capture.BG.PNG');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+
+<body>
+
+    <div class="logo">
+      <img style="width: 100px" ; src="Capture.PNG" alt="Logo brand" height="80" width="100" />
+    </div>
+    <h1 class="brand">LC BANK</h1>
+    <div class="nev-links">
+      <a href="index.html">BACK</a>
+        <a href="SignUp.html">Sign Up</a>
+    </div>
+  </header>
+
+-
+  <body>
+    <h2 style="text-align:center">Login Form</h2>
+    <div class="container">
+      <form onsubmit="return loginUser()" action="FirstPage.html">
+        <div>
+      <label for="uname"><b> UserName</label>
+      <input type="text" placeholder="Enter UserName" name="uname"required>
+      </div>
+      <div>
+      <label for="NRIC"><b>NRIC/Passport ID</b></label>
+      <input type="text" placeholder="Enter NRIC/Passport ID" name="ID" pattern = "[TSGF][0-9]{7}[A-Z]"required>
+      </div>
+      <div>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+      </div>
+      <div>
+    
+          <button class="button" type="submit">Login</button>
+      </div>
+      </form>
+      <p id="error-msg" style="color: darkred"></p>
+      
+        <span class="psw"> <a href="Forget_PW.html">Forgot password?</a></span>
+        <div class="nev-links">
+        </div>
+
+    </div>
+    <script src="Validate_Login.js"></script>
+    <script>
+      function loginUser() {
+        var username = document.getElementsByName("uname")[0].value;
+        alert("Login successful for user: " + username);
+        return true; 
+      }
+    </script>
+</body>
+
+</html>

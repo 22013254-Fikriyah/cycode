@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Add recipient </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="Validation_recipient.js"></script>
+
+<style>
+  header {
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand {
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+  margin-left: 10px;
+}
+
+form {
+    border: 3px solid white;
+    border-radius: 10px;
+   
+}
+   
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+button {
+  background-color: rgb(95, 215, 245);
+  color: white;
+  padding: 20px 20px;
+  margin: 12px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color:white;
+  border-radius: 5px;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  margin: 8px 0;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+footer{
+  background-color: white;
+}
+        body {
+          background-image: url('Capture.BG.PNG');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+</style>
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+        <img style="width: 100px" ; src="Capture.png" alt="Logo brand" height="80" width="100" />
+    </div>
+    <h1 class="brand">LC BANK</h1>
+    <div class="nev-links">
+        <a href="transfer.html">BACK</a>
+        <p>
+    </div>
+</header>
+<h2 style="text-align:center"> Add recipient</h2>
+  <div class="container">
+    <form onsubmit="return formValidation()" action="transfer.html">
+      <div>
+    <label for="uname"><b>Full Name</b></label>
+    <input type="text" placeholder="Enter Full Name" name="uname" required>
+    </div>
+    <div>
+        <label for="address"><b>Address</b></label>
+        <input type="text" placeholder="Enter recipient address" name="address" required>
+      </div>
+  <div>
+    <label for="num"><b>Contact Number</b></label>
+    <input type="text" placeholder="Enter Contact Number" name="num"required>
+  </div>
+ 
+  <div>
+    <label for="account"><b></b>Bank account</b></label>
+    <input type="text" placeholder="Enter Bank account " name="account" required>
+  </div>
+  <div>
+    <label for="name"><b>Bank name</b></label>
+    <input type="text" placeholder=" Enter Bank name" name="name" required>
+  </div>
+  <div>
+    <label for="relationship"><b> Relationship</b></label>
+    <input type="text" placeholder="Relationship" name="relationship" required>
+    <span id='message'></span>
+  </div>
+    <div>
+      <button class="button" type="submit">Confirm</button>
+  </div>
+  </form>
+  <p id="error-msg" style="color: rgb(147, 4, 4)"></p>
+  
+    </div>
+
+  </div>
+
+</html>

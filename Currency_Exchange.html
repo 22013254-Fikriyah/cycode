@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Currency_converter</title>
+    
+   </head>
+ <style>
+    *{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+    }
+  header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex; /* Use flexbox to align items */
+        justify-content: space-between; /* Space items evenly across the header */
+        align-items: center; /* Center items vertically in the header */
+        background-color: transparent;
+        color: black;
+        padding: 10px;
+        font-size: 1em;
+        font-weight: bold;
+        z-index: 9999; /* Make sure it is above other elements */
+    }
+    .logo img {
+        max-height: 80px;
+    }
+    .nev-links {
+        
+        margin-left: 20px;
+    }
+
+body{
+
+  min-height: 100vh;;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0;
+    background-image: url('Capture.BG.PNG');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+.converter-wrapper{
+  min-width: 900px;
+  background-color:white;
+  border-radius: 0.4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 4rem 3rem;
+  box-shadow: 0 6px 6px -1px black;
+}
+.converter-wrapper h2{
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  color:black;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  text-align: center;
+ text-transform: uppercase;
+ line-height:1.4 ;
+}
+.converter-inputs{
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 2fr;
+  column-gap: 3rem;
+  align-items: center;
+}
+.converter-inputs > div{
+  margin-bottom: 2rem;
+}
+.converter-inputs label{
+  color:grey ;
+  margin-bottom: 0.5rem;
+  display: block;
+
+
+}
+.converter-inputs input .converter-inputs select{
+  border: 1px solid black;
+  border-radius: 1rem;
+  font-size:1rem;
+  padding: 0.8rem;
+  outline: 0;
+  width: 100%;
+
+}
+icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0!important;
+}
+.icon img{
+  width: 40px;
+
+
+}
+.icon button{
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+.icon button:hover{
+  transform: scale(1.1);
+}
+.result-wrapper{
+  font-size: 1.4rem;
+
+}
+#from-result{
+  color:black ;
+  font-weight: boid;
+}
+#to-result{
+  color:rgb(117, 254, 208);
+  font-weight: boid;
+
+}
+#convert-btn{
+  background-color: rgb(164, 205, 223);
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 0.8rem 1.4rem;
+  margin-top:1.6rem ;
+  cursor:pointer;
+}
+@media screen and (max-width:1000px){
+  .converter-wrapper h2{
+      font-size: 2rem;
+      top:-100px;
+  }
+  .converter-inputs{
+      grid-template-columns: repeat(2.1fr);
+  }
+  .converter-wrapper{
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      min-width:400px;
+
+  }
+
+  .result-wrapper{
+   font-size: 1.4rem;
+   text-align: center; 
+    margin-bottom: 2rem;
+    color: black; 
+    font-weight: bold;
+
+  }
+  #covert-btn{
+      font-size: 100%;
+
+  }
+}
+@media screen and (max-width:678px){
+  .converter-wrapper{
+      min-width: 325px;
+  }
+}
+
+
+
+ </style>
+ <body>
+ 
+         <header>
+                <div class="logo">
+                    <img style="width: 100px" ; src="Capture.PNG" alt="Logo brand" height="80" width="100" />
+                </div>
+                <div class="nev-links">
+                    <a href="FirstPage.html">BACK</a>
+                    <p>
+                </div>
+            </header>
+        <body>
+ <div class = "wrapper">
+
+    <div class = "converter-wrapper">
+        <h2>Currency Converter</h2>
+        <!-- converter inputs -->
+        <div class = "converter-inputs">
+            <div class = "from-amount">
+                <label for = "">Amount</label>
+                <input type = "text" class = "form-control" placeholder="$" min = "0" value = "1">
+            </div>
+            <div class = "from-currency">
+                <label for = "">From</label>
+                <select>
+                    <option>USD</option>
+                    <option>USD</option>
+                    <option>USD</option>
+                </select> 
+            </div>
+            <div class = "icon">
+                <button type = "button" id = "swap-btn">
+                    <img src = "exchange.png">
+                </button>
+            </div>
+            <div class = "to-currency">
+                <label for = "">To</label>
+                <select>
+                    <option>USD</option>
+                    <option>USD</option>
+                    <option>USD</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- converted result -->
+        <div class = "result-wrapper">
+            <p>
+                <span id = "from-result">USD 1</span>
+                =
+                <span id = "to-result">EUR 1</span>
+            </p>
+        </div>
+        <button type = "button" id = "convert-btn">convert</button>
+    </div>
+</div>
+
+<script src = "Ex.script.js"></script>
+    </body>
+    </html>

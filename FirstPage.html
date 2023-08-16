@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<head>
+    <title>HomePage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap CSS Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+
+        header {
+            background-color:transparent;
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .brand {
+            font-size: 50px;
+            font-weight: bold;
+            color: black;
+            margin-left: 10px;
+        }
+        .login-button {
+            background-color: rgb(146, 171, 182);
+            border: none;
+            color: white;
+            text-transform: uppercase;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .image-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .image {
+            max-width: 300px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .btn-primary {
+            background-color: rgb(147, 187, 200);
+        }
+
+        .button-container a {
+            margin-top: 10px;
+        }
+        .bottom-right-image {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            max-width: 150px;
+            height: auto;
+        }
+        footer {
+            background-color: white;
+            text-align: center;
+            font-family: 'Times New Roman';
+        
+        }
+        body {
+          background-image: url('Capture.BG.PNG');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img style="width: 100px" ; src="Capture.PNG" alt="Logo brand" height="80" width="100" />
+        </div>
+        
+        <h1 class="brand">LC Bank</h1>
+        <div class="nev-links">
+            <a href="Login.html"> <button class="login-button">Login</button></a>
+            <a href="AboutUs.html">About Us</a>
+        </div>
+    </header>
+  
+    <section style="text-align:center"class="Content" style="max-width:600px">
+        <p class="Discription"><i> Welcome to LC Bank! Make a transfer now with our Bank!</i></p>
+      </section>
+<section style="max-width: 800px; margin: auto; display: flex; align-items: center;">
+        <div class="image-container">
+            <img class="image" src="Capture.2.PNG" alt="Image">
+        </div>
+        <div class="button-container">
+            <a href="Currency_Exchange.html"><button class="btn btn-primary">Currency Exchange</button></a>
+            <a href="Transfer.html"><button class="btn btn-primary">Transfer of Money  </button></a>
+        </div>
+        <a href="Chatbot.1.html">
+            <img class="bottom-right-image" src="Chatbot.PNG" alt="Right Image">
+            
+    </section>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
